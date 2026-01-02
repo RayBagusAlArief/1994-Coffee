@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branch - 1994 Coffee & Creative Space</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+            
+        @font-face {
+            font-family: 'LemonMilk';
+            src: url('assets/fonts/LEMONMILK-Regular.otf') format('opentype');
+        }
+        body {
+            font-family: 'LemonMilk', sans-serif;
+            background-color: #000;
+            color: white;
+            overflow-x: hidden;
+        }
+        .text-accent { color: #F2A900; }
+        /* Font sans untuk deskripsi agar nyaman dibaca */
+        .desc-font { font-family: ui-sans-serif, system-ui, sans-serif; }
+        /* Pengaturan Khusus Layar HP (Mobile) */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem !important; line-height: 1.2; }
+            h2 { font-size: 2rem !important; text-align: center; margin-bottom: 1.5rem; }
+            img { max-width: 80% !important; margin: 0 auto; }
+
+            .grid {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 2rem !important;
+            }
+
+            main {
+                padding-left: 1.5rem !important;
+                padding-right: 1.5rem !important;
+                padding-top: 6rem !important;
+            }
+
+            /* --- FIX LOGO FOOTER KIRI & KECIL --- */
+            footer {
+                padding-left: 1.5rem !important;
+                padding-right: 1.5rem !important;
+            }
+            
+            footer .max-w-4xl {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start !important; /* Paksa ke kiri */
+                text-align: left !important;
+            }
+
+            .footer-img {
+                height: 10px !important; /* Ukuran logo lebih kecil di HP */
+                margin-bottom: 1.5rem;
+            }
+
+            .footer-address {
+                font-size: 10px !important; /* Teks alamat sedikit lebih kecil di HP */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fixed inset-0 z-[-1] opacity-20">
+        <img src="assets/images/BRANCH.jpg" alt="Background" class="w-full h-full object-cover grayscale">
+        <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+
+    <nav class="fixed w-full z-[100] flex justify-between items-center px-6 md:px-12 py-6 bg-black/40 backdrop-blur-md">
+        <div class="logo">
+            <img src="assets/images/Logo-1994.jpg" alt="Logo" class="h-8 md:h-10">
+        </div>
+
+        <button id="menu-btn" class="md:hidden text-white focus:outline-none z-[110] p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+        <ul id="nav-links" class="fixed inset-0 bg-black/95 flex flex-col items-center justify-start pt-10 space-y-4 text-sm font-bold tracking-[0.3em] transition-transform duration-500 translate-x-full md:relative md:translate-x-0 md:flex-row md:inset-auto md:bg-transparent md:space-y-0 md:space-x-8 md:text-[10px] md:pt-0 md:justify-center">
+            <li><a href="index.html" class="hover:text-accent transition">HOME</a></li>
+            <li><a href="about.html" class="hover:text-accent transition">ABOUT US</a></li>
+            <li><a href="menu.html" class="hover:text-accent transition">MENU</a></li>
+            <li><a href="branch.html" class="text-accent border-b border-accent md:border-none">BRANCH</a></li>
+            <li><a href="contact.html" class="hover:text-accent transition">CONTACT</a></li>
+        </ul>
+    </nav>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const navLinks = document.getElementById('nav-links');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            // Toggle Menu
+            navLinks.classList.toggle('translate-x-full');
+            
+            // Ganti Icon Hamburger ke 'X' saat terbuka
+            if (navLinks.classList.contains('translate-x-full')) {
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            } else {
+                menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            }
+        });
+
+        // Menutup menu saat salah satu link diklik (untuk mobile)
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.add('translate-x-full');
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            });
+        });
+    </script>
+    <main class="pt-32 pb-20 px-8 md:px-20 max-w-7xl mx-auto space-y-32">
+        
+        <section class="flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2 space-y-4">
+                <h2 class="text-accent text-4xl font-bold tracking-tight uppercase">Dago</h2>
+                <p class="desc-font text-[25px]  leading-relaxed opacity-80">
+                    Berlokasikan di kawasan Dago yang sejuk, 1994 Coffee and Creative Space Dago menawarkan suasana nyaman dengan pemandangan kota yang cocok untuk bersantai maupun bekerja, serta ditemani dengan live musik.
+                </p>
+            </div>
+            <div class="md:w-1/2">
+                <img src="assets/images/Dago.jpeg" alt="Cabang Dago" class="w-full h-70 object-cover rounded-sm shadow-2xl border border-white/10">
+            </div>
+        </section>
+
+        <section class="flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2 order-2 md:order-1">
+                <img src="assets/images/Naripan.jpeg" alt="Cabang Naripan" class="w-full h-70 object-cover rounded-sm shadow-2xl border border-white/10">
+            </div>
+            <div class="md:w-1/2 space-y-4 order-1 md:order-2">
+                <h2 class="text-accent text-4xl font-bold tracking-tight uppercase">Naripan</h2>
+                <p class="desc-font text-[25px]  leading-relaxed opacity-80">
+                    Terletak di pusat kota Bandung, 1994 Coffee and Creative Space Naripan menjadi tempat ideal untuk menikmati kopi berkualitas di tengah aktivitas perkotaan dan juga tempat berkumpul komunitas-komunitas mobil maupun komunitas motor.
+                </p>
+            </div>
+        </section>
+
+        <section class="flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2 space-y-4">
+                <h2 class="text-accent text-4xl font-bold tracking-tight uppercase">Serang</h2>
+                <p class="desc-font text-[25px] leading-relaxed opacity-80">
+                    Berada di area Serang yang tenang, 1994 Coffee and Creative Space Serang merupakan coffee shop terbesar di Serang saat ini. Tempat ini juga menjadi lokasi meetcar komunitas Serang dan juga sambil ditemani oleh live musiknya.
+                </p>
+            </div>
+            <div class="md:w-1/2">
+                <img src="assets/images/serang.jpeg" alt="Cabang Serang" class="w-full h-70 object-cover rounded-sm shadow-2xl border border-white/10">
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="bg-black border-t-8 border-[#F2A900] pt-20 pb-16 px-8 md:px-20">
+    <div class="max-w-4xl">
+        <div class="mb-8">
+            <img src="assets/images/Logo-1994.jpg" alt="Logo Footer" class="h-16 object-contain">
+        </div>
+
+        <div class="mb-10">
+            <a href="mailto:1994cncs@gmail.com" class="font-sans text-sm md:text-base tracking-widest hover:text-accent transition lowercase text-white">
+                1994cncs@gmail.com
+            </a>
+        </div>
+        
+        <div class="font-sans text-xs md:text-sm tracking-wide leading-relaxed opacity-70 space-y-4 font-light text-white">
+            <p>
+                Jl. Pakar Timur No. 10, Ciburial,<br>
+                Kab. Bandung, Kota Bandung, Jawa Barat 40198
+            </p>
+            <p>
+                Jl. Naripan No.59, Kb. Pisang, <br>
+                Kota Bandung, Jawa Barat 40112
+            </p>
+        </div>
+    </div>
+    </footer>
+
+</body>
+</html>

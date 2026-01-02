@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - 1994 Coffee & Creative Space</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Media Query untuk Mobile (Layar di bawah 768px) */
+        @media (max-width: 768px) {
+            
+            /* 1. Ukuran Font Judul Utama (About Us, Menu, Contact) */
+            h1 {
+                font-size: 32px !important; /* Silakan ubah angka ini sesuai selera */
+                line-height: 1.2;
+            }
+
+            /* 2. Ukuran Font Judul Kategori (Manual Brew, Pasta, dsb) */
+            h2 {
+                font-size: 24px !important; 
+            }
+
+            /* 3. Ukuran Font Nama Menu (Spaghetti, Matcha, dsb) */
+            .font-sans.text-lg, 
+            .font-sans.text-xl {
+                font-size: 16px !important;
+            }
+
+            /* 4. Ukuran Font Harga (30k, 45k, dsb) */
+            .font-bold.text-lg,
+            .font-bold.text-xl {
+                font-size: 16px !important;
+            }
+
+            /* 5. Ukuran Font Deskripsi atau Paragraf (Tentang Kami, Deskripsi Cabang) */
+            p, .desc-font {
+                font-size: 14px !important;
+                line-height: 1.6;
+            }
+
+            /* 6. Ukuran Font Link Navigasi di Hamburger Menu */
+            #nav-links li a {
+                font-size: 12px !important;
+                letter-spacing: 0.2em;
+            }
+        }
+        @font-face {
+            font-family: 'LemonMilk';
+            src: url('assets/fonts/LEMONMILK-Regular.otf') format('opentype');
+        }
+
+        body {
+            font-family: 'LemonMilk', sans-serif;
+            background-color: #0d0d0d;
+            /* Tambahkan tekstur halus jika ada */
+            background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+            color: white;
+            overflow-x: hidden; /* Mencegah scroll horizontal karena elemen melayang */
+        }
+
+        .text-accent { color: #F2A900; }
+        
+        /* Font sekunder untuk list menu agar lebih bersih */
+        .menu-font {
+            font-family: ui-sans-serif, system-ui, sans-serif;
+            letter-spacing: 0.05em;
+        }
+
+        /* Animasi melayang halus */
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-anim { animation: floating 3s ease-in-out infinite; }
+    </style>
+</head>
+<body class="pb-20">
+
+    <nav class="fixed w-full z-[100] flex justify-between items-center px-6 md:px-12 py-6 bg-black/40 backdrop-blur-md">
+        <div class="logo">
+            <img src="assets/images/Logo-1994.jpg" alt="Logo" class="h-8 md:h-10">
+        </div>
+
+        <button id="menu-btn" class="md:hidden text-white focus:outline-none z-[110] p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+        <ul id="nav-links" class="fixed inset-0 bg-black/95 flex flex-col items-center justify-start pt-10 space-y-4 text-sm font-bold tracking-[0.3em] transition-transform duration-500 translate-x-full md:relative md:translate-x-0 md:flex-row md:inset-auto md:bg-transparent md:space-y-0 md:space-x-8 md:text-[10px] md:pt-0 md:justify-center">
+            <li><a href="index.html" class="nav-link hover:text-accent transition">HOME</a></li>
+            <li><a href="about.html" class="nav-link hover:text-accent transition">ABOUT US</a></li>
+            <li><a href="menu.html" class="nav-link text-accent ">MENU</a></li>
+            <li><a href="branch.html" class="nav-link hover:text-accent transition">BRANCH</a></li>
+            <li><a href="contact.html" class="nav-link hover:text-accent transition">CONTACT</a></li>
+        </ul>
+    </nav>
+
+<main class="max-w-[1400px] mx-auto pt-32 px-10 relative overflow-visible">
+    
+    <section class="relative mb-32">
+        
+        <div class="text-center mb-24 relative">
+            <div class="inline-block ">
+                <img src="assets/images/LOGO 1994 AKSEN 1.png" class="absolute -left-1 top-5 w-10 opacity-80">
+                <h1 class="text-6xl font-serif tracking-tight">Coffee</h1>
+            </div>
+            <div class="flex items-center justify-center gap-4 mt-2">
+                <div class="h-[1px] w-32 bg-white/70"></div>
+                <p class="text-[9px] tracking-[0.4em] opacity-70 ">1994 Coffee & Creative Space</p>
+                <div class="h-[1px] w-32 bg-white/70"></div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start relative mb-24">
+    
+            <div class="md:col-span-8 lg:col-span-7">
+                <h2 class="text-5xl font-bold tracking-tighter mb-4 font-sans italic">Manual Brew</h2>
+                
+                <div class="flex justify-end pr-7 mb-2">
+                    <div class="flex gap-11 text-[15px] font-bold opacity-60 tracking-[0.2em]">
+                        <span class="w-14 text-center">HOT</span>
+                        <span class="w-3 text-center">ICED</span>
+                    </div>
+                </div>
+
+                <div class="space-y-2 menu-font tracking-[0.2em] text-sm">
+                    
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-start">
+                            <div class="flex ">
+                                <span class="text-xl ">V60</span> 
+                                <soan class="text-accent text-[10px] font-sans italic lowercase mt-1">(most recommended)</soan>
+                            </div>
+                            <div class="flex gap-12  text-lg pt-1">
+                                <span class="w-8 text-right">30k</span>
+                                <span class="w-12 text-right opacity-50">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl">Vietnam Drip</span>
+                            <div class="flex gap-12 text-lg">
+                                <span class="w-8 text-right">26k</span>
+                                <span class="w-12 text-right opacity-50">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl">Japanese</span>
+                            <div class="flex gap-12 text-lg">
+                                <span class="w-12 text-right opacity-50">-</span>
+                                <span class="w-12 text-right">32k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="md:col-span-4 lg:col-span-5 flex justify-end items-center ">
+                <div class="">
+                    <img src="assets/images/manualbrew.png" alt="Cup Coffee" class="w-full max-w-[300px] drop-shadow-2xl">
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 items-center relative mb-32">
+    
+            <div class="md:col-span-4 lg:col-span-4 flex justify-start order-2 md:order-1">
+                <div class="">
+                    <img src="assets/images/espressobased.png" alt="Espresso Cup" class="w-full max-w-[450px] drop-shadow-2xl "> 
+                </div>
+            </div>
+
+            <div class="md:col-span-8 lg:col-span-8 order-1 md:order-2">
+                <h2 class="text-5xl font-bold tracking-tighter mb-4 font-sans italic">Espresso Based</h2>
+                
+                <div class="flex justify-end  mb-2">
+                    <div class="flex gap-8 text-[10px] font-bold opacity-60 tracking-[0.1em] text-center">
+                        <span class="w-12">HOT</span>
+                        <span class="w-12 leading-tight">ICED<br>(Medium)</span>
+                        <span class="w-12 leading-tight">ICED<br>(Large)</span>
+                    </div>
+                </div>
+
+                <div class="space-y-2 menu-font tracking-[0.1em] text-sm">
+                    
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-sans">Cappuccino</span>
+                            <div class="flex gap-8 text-lg">
+                                <span class="w-12 text-right">27k</span>
+                                <span class="w-12 text-right">30k</span>
+                                <span class="w-12 text-right">35k</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl  font-sans">Cappuccino Butterscotch</span>
+                            <div class="flex gap-8 text-lg">
+                                <span class="w-12 text-right">32k</span>
+                                <span class="w-12 text-right">34k</span>
+                                <span class="w-12 text-right">39k</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-sans">Cappuccino Hazelnut</span>
+                            <div class="flex gap-8 text-lg">
+                                <span class="w-12 text-right">32k</span>
+                                <span class="w-12 text-right">34k</span>
+                                <span class="w-12 text-right">39k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-sans">Latte</span>
+                            <div class="flex gap-8 text-lg">
+                                <span class="w-12 text-right">30k</span>
+                                <span class="w-12 text-right">32k</span>
+                                <span class="w-12 text-right">37k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-sans">Latte Butterscotch</span>
+                            <div class="flex gap-8 text-lg">
+                                <span class="w-12 text-right">32k</span>
+                                <span class="w-12 text-right">35k</span>
+                                <span class="w-12 text-right">41k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-sans">Latte Hazelnut</span>
+                            <div class="flex gap-8 text-lg">
+                                <span class="w-12 text-right">32k</span>
+                                <span class="w-12 text-right">35k</span>
+                                <span class="w-12 text-right">41k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-sans">Americano</span>
+                            <div class="flex gap-8 text-lg">
+                                <span class="w-12 text-right">22k</span>
+                                <span class="w-12 text-right">25k</span>
+                                <span class="w-12 text-right">30k</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-sans">Con hello</span>
+                            <div class="flex gap-8 text-lg">
+                                <span class="w-12 text-right">-</span>
+                                <span class="w-12 text-right">25k</span>
+                                <span class="w-12 text-right">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" border-white/10 pb-2 text-accent">
+                        <div class="flex justify-between items-start">
+                            <div class="flex flex-col">
+                                <span class="text-xl text-white font-sans">Coffee Milk Butterscotch</span>
+                                <span class="text-[15px] font-sans italic lowercase mt-1 opacity-80">(best seller)</span>
+                            </div>
+                            <div class="flex gap-8 text-white text-lg pt-1">
+                                <span class="w-12 text-right opacity-50">-</span>
+                                <span class="w-12 text-right">30k</span>
+                                <span class="w-12 text-right">35k</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-white/10 pb-2 text-accent">
+                        <div class="flex justify-between items-start">
+                            <div class="flex flex-col">
+                                <span class="text-xl text-white font-sans">Coffee Milk Hazelnut</span>
+                                <span class="text-[15px] font-sans italic lowercase mt-1 opacity-80">(best seller)</span>
+                            </div>
+                            <div class="flex gap-8 text-white text-lg pt-1">
+                                <span class="w-12 text-right opacity-50">-</span>
+                                <span class="w-12 text-right">30k</span>
+                                <span class="w-12 text-right">35k</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-white/10 pb-2 text-accent">
+                        <div class="flex justify-between items-start">
+                            <div class="flex flex-col">
+                                <span class="text-xl text-white font-sans">Coffee Milk Gula Aren</span>
+                                <span class="text-[15px] font-sans italic lowercase mt-1 opacity-80">(best seller)</span>
+                            </div>
+                            <div class="flex gap-8 text-white text-lg pt-1">
+                                <span class="w-12 text-right opacity-50">-</span>
+                                <span class="w-12 text-right">28k</span>
+                                <span class="w-12 text-right">34k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative mb-32">
+        <div class="text-center mb-20 relative">
+            <div class="inline-block relative">
+                <h1 class="text-6xl font-serif tracking-tight">Non-Coffee</h1>
+            </div>
+            <div class="flex items-center justify-center gap-4 mt-2">
+                <div class="h-[1px] w-32 bg-white/70"></div>
+                <p class="text-[9px] tracking-[0.4em] opacity-70 uppercase">1994 Coffee & Creative Space</p>
+                <div class="h-[1px] w-32 bg-white/70"></div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start relative">
+            
+            <div class="md:col-span-8 lg:col-span-8">
+                <h2 class="text-4xl tracking-tighter mb-6 font-bold font-sans italic">Powder Based</h2>
+                
+                <div class="flex justify-end pl-2 mb-4">
+                    <div class="flex gap-7 text-[12px] opacity-60 tracking-[0.1em] text-center">
+                        <span class="w-12">HOT</span>
+                        <span class="w-12 leading-tight">ICED<br>(Medium)</span>
+                        <span class="w-12 leading-tight">ICED<br>(Large)</span>
+                    </div>
+                </div>
+
+                <div class="space-y-2 menu-font tracking-[0.1em] text-sm">
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-sans">Chocolate</span>
+                            <div class="flex gap-8 text-lg">
+                                <span class="w-12 text-right">30k</span>
+                                <span class="w-12 text-right">32k</span>
+                                <span class="w-12 text-right">37k</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-sans">Chocolate Mint</span>
+                            <div class="flex gap-8 text-lg">
+                                <span class="w-12 text-right">-</span>
+                                <span class="w-12 text-right">33k</span>
+                                <span class="w-12 text-right">38k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-sans">Matcha</span>
+                            <div class="flex gap-8 text-lg">
+                                <span class="w-12 text-right">32k</span>
+                                <span class="w-12 text-right">35k</span>
+                                <span class="w-12 text-right">40k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-sans">Red Velvet</span>
+                            <div class="flex gap-8 text-lg">
+                                <span class="w-12 text-right opacity-70">-</span>
+                                <span class="w-12 text-right">30k</span>
+                                <span class="w-12 text-right">35k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-sans">Taro</span>
+                            <div class="flex gap-8 text-lg">
+                                <span class="w-12 text-right opacity-70">-</span>
+                                <span class="w-12 text-right">30k</span>
+                                <span class="w-12 text-right">35k</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-sans">Chocolate Berry</span>
+                            <div class="flex gap-8 text-lg">
+                                <span class="w-12 text-right opacity-70">-</span>
+                                <span class="w-12 text-right">34k</span>
+                                <span class="w-12 text-right">39k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="md:col-span-4 lg:col-span-4 flex justify-end items-center pt-8">
+                <div class="relative">
+                    <img src="assets/images/matcha.png" alt="Non-Coffee Matcha" class="w-full max-w-[300px] drop-shadow-2xl">
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pt-10 relative mb-32">
+            <div class="md:col-span-4 lg:col-span-4 flex justify-start order-2 md:order-1">
+                <div class="relative">
+                    <img src="assets/images/mocktail.png" alt="Mocktail" class="w-full max-w-[300px] drop-shadow-2xl">
+                </div>
+            </div>
+
+            <div class="md:col-span-8 lg:col-span-8 order-1 md:order-2">
+                <h2 class="text-4xl font-bold tracking-tighter mb-4 font-sans italic">Mocktail</h2>
+                
+                <div class="flex justify-end pr-4 mb-4">
+                    <div class="flex gap-12 text-[15px] font-bold opacity-60 tracking-[0.2em]">
+                        <span class="w-12 text-center">HOT</span>
+                        <span class="w-12 text-center">ICED</span>
+                    </div>
+                </div>
+
+                <div class="space-y- menu-font tracking-[0.1em] text-sm">
+                    <div class=" border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-sans">Mojito</span>
+                            <div class="flex gap-12 pr-5 text-lg">
+                                <span class="w-12 text-right opacity-70">-</span>
+                                <span class="w-12 text-right">38k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-sans">Strawberry Milshake</span>
+                            <div class="flex gap-12 pr-5 text-lg">
+                                <span class="w-12 text-right opacity-70">-</span>
+                                <span class="w-12 text-right">37k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-sans">cocomoon</span>
+                            <div class="flex gap-12 pr-5 text-lg">
+                                <span class="w-12 text-right opacity-70">-</span>
+                                <span class="w-12 text-right">37k</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl  font-sans">Summer Passion</span>
+                            <div class="flex gap-12 pr-5 fon text-lg">
+                                <span class="w-12 text-right opacity-10">-</span>
+                                <span class="w-12 text-right">30k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-sans">Tropical Berries</span>
+                            <div class="flex gap-12 pr-5 text-lg">
+                                <span class="w-12 text-right opacity-70">-</span>
+                                <span class="w-12 text-right">35k</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start relative mb-5">
+            <div class="md:col-span-8 lg:col-span-8">
+                <h2 class="text-4xl font-bold tracking-tighter mb-4 font-sans italic">Tea</h2>
+                
+                <div class="flex justify-end  mb-4">
+                    <div class="flex gap-7 text-[10px] font-bold opacity-60 tracking-[0.1em] text-center">
+                        <span class="w-12">HOT</span>
+                        <span class="w-12 leading-tight">ICED<br>(Medium)</span>
+                        <span class="w-12 leading-tight">ICED<br>(Large)</span>
+                    </div>
+                </div>
+
+                <div class="space-y-2 menu-font tracking-[0.1em] text-sm">
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl  font-sans">Lemon Tea</span>
+                            <div class="flex gap-8 text-lg">
+                                <span class="w-12 text-right">15k</span>
+                                <span class="w-12 text-right">18k</span>
+                                <span class="w-12 text-right">23k</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-sans">lychee Tea</span>
+                            <div class="flex gap-8 text-lg">
+                                <span class="w-12 text-right opacity-70">-</span>
+                                <span class="w-12 text-right">25k</span>
+                                <span class="w-12 text-right">30k</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-sans">Thai Tea</span>
+                            <div class="flex gap-8 text-lg">
+                                <span class="w-12 text-right opacity-70">-</span>
+                                <span class="w-12 text-right">20k</span>
+                                <span class="w-12 text-right">25k</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-4 lg:col-span-4 flex justify-end">
+                <img src="assets/images/lemontea.png" alt="Lemon Tea" class="w-full max-w-[350px] drop-shadow-2xl">
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8  items-start relative ">
+            <div class="md:col-span-8 lg:col-span-8">
+                <h2 class="text-4xl font-bold tracking-tighter mb-2 font-sans italic">Blend</h2>
+                
+                <div class="flex justify-end  mb-4">
+                    <div class="flex gap-5 text-[10px] font-bold opacity-60 tracking-[0.1em] text-center">
+                        <span class="w-12">HOT</span>
+                        <span class="w-12 leading-tight">ICED<br>(Medium)</span>
+                    </div>
+                </div>
+
+                <div class="space-y-2 menu-font tracking-[0.1em] text-sm">
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl  font-sans">Regal Vanilla</span>
+                            <div class="flex gap-8 text-lg">
+                                <span class="w-12 text-right">-</span>
+                                <span class="w-12 text-right">40k</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-sans">Cookies & Cream</span>
+                            <div class="flex gap-8 text-lg">
+                                <span class="w-12 text-right opacity-70">-</span>
+                                <span class="w-12 text-right">37k</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pt-10 relative mb-32">
+            <div class="md:col-span-4 lg:col-span-4 flex justify-start order-2 md:order-1">
+                <div class="relative">
+                    <img src="assets/images/Beer (2).png" alt="Beer" class="w-full max-w-[300px] drop-shadow-2xl">
+                </div>
+            </div>
+
+            <div class="md:col-span-8 lg:col-span-8 order-1 md:order-2">
+                <h2 class="text-4xl font-bold tracking-tighter mb-4 font-sans italic">Beer</h2>
+                
+                <div class="flex justify-end pr-20 mb-4">
+                    <div class="flex gap-12 text-[15px] font-bold opacity-60 tracking-[0.2em]">
+                        <span class="w-12 text-center">ICED</span>
+                    </div>
+                </div>
+
+                <div class="space-y-2 menu-font tracking-[0.1em] text-sm">
+                    <div class=" border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <p class="text-xl font-sans">Balihai Beer (320ML)</p>
+                            <div class="flex gap-12 pr-20 text-lg">
+                                <span class="w-12 text-right">38k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" border-white/10 pb-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-sans">Draft Beer (500ML)</span>
+                            <div class="flex gap-12 pr-20 text-lg">
+                                <span class="w-12 text-right">37k</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <class="relative mb-32">
+        <div class="text-center mb-20 relative">
+            <div class="inline-block relative">
+                <h1 class="text-6xl font-serif tracking-tight">Eats and Bites</h1>
+            </div>
+            <div class="flex items-center justify-center gap-4 mt-2">
+                <div class="h-[1px] w-32 bg-white/20"></div>
+                <p class="text-[9px] tracking-[0.4em] opacity-40 uppercase">1994 Coffee & Creative Space</p>
+                <div class="h-[1px] w-32 bg-white/20"></div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center mb-24">
+            <div class="md:col-span-7 lg:col-span-6">
+                <div class="mb-12">
+                    <h2 class="text-4xl font-bold tracking-tighter mb-6 font-sans italic">Pasta</h2>
+                    <div class="space-y-2 menu-font tracking-[0.1em] text-sm">
+                        <div class="border-b border-white/10 pb-2 flex justify-between">
+                            <span class="text-lg">Spaghetti Carbonara</span>
+                            <span class="text-lg">45k</span>
+                        </div>
+                        <div class="border-b border-white/10 pb-2 flex justify-between">
+                            <span class="font-sans text-lg">Spaghetti Aglio Olio</span>
+                            <span class="text-lg">45k</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-4xl font-bold tracking-tighter mb-6 font-sans italic">Classic Burger</h2>
+                    <div class="space-y-4 menu-font tracking-[0.1em] text-sm">
+                        <div class="border-b border-white/10 pb-2 flex justify-between">
+                            <span class="font-sans text-lg">Beef Burger</span>
+                            <span class="text-lg">58k</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:col-span-5 lg:col-span-6 flex justify-end">
+                <img src="assets/images/ricebowl.png" alt="Rice Bowl on Wood" class="w-full max-w-[450px] drop-shadow-2xl">
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-32">
+            <div class="md:col-span-5 lg:col-span-6 order-2 md:order-1">
+                <img src="assets/images/friedrice.png" alt="Rice Bowls" class="w-full max-w-[400px] drop-shadow-2xl">
+            </div>
+
+            <div class="md:col-span-7 lg:col-span-6 order-1 md:order-2">
+                <div class="mb-12">
+                    <h2 class="text-4xl font-bold tracking-tighter mb-6 font-sans italic">Rice Bowl</h2>
+                    <div class="space-y-2 menu-font tracking-[0.1em] text-sm">
+                        <div class="border-b border-white/10 pb-2 flex justify-between">
+                            <span class="font-sans text-lg">Rice Bowl Sambal Matah</span>
+                            <span class="text-lg">35k</span>
+                        </div>
+                        <div class="border-b border-white/10 pb-2 flex justify-between">
+                            <span class="font-sans text-lg">Rice Bowl Black Pepper</span>
+                            <span class="text-lg">35k</span>
+                        </div>
+                        <div class="border-b border-white/10 pb-2 flex justify-between">
+                            <span class="font-sans text-lg">Rice Bowl Yakiniku</span>
+                            <span class="text-lg">38k</span>
+                        </div>
+                        <div class="border-b border-white/10 pb-2 flex justify-between">
+                            <span class="font-sans text-lg">Rice Bowl Teriyaki</span>
+                            <span class="text-lg">38k</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-4xl font-bold tracking-tighter mb-6 font-sans italic">Fried Rice</h2>
+                    <div class="space-y-2 menu-font tracking-[0.1em] text-sm">
+                        <div class="border-b border-white/10 pb-2 flex justify-between">
+                            <span class="font-sans text-lg">Nasi Goreng</span>
+                            <span class="text-lg">38k</span>
+                        </div>
+                        <div class="border-b border-white/10 pb-2 flex justify-between">
+                            <span class="font-sans text-lg">Nasi</span>
+                            <span class="text-lg">5k</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+            <div class="md:col-span-7 lg:col-span-6">
+                <div class="mb-12">
+                    <h2 class="text-4xl font-bold tracking-tighter mb-6 font-sans italic">Noodles</h2>
+                    <div class="space-y-2 menu-font tracking-[0.1em] text-sm">
+                        <div class="border-b border-white/10 pb-2 flex justify-between">
+                            <span class="font-sans text-lg">1994 Fried Noodles</span>
+                            <span class="text-lg">35k</span>
+                        </div>
+                        <div class="border-b border-white/10 pb-2 flex justify-between">
+                            <span class="font-sans text-lg">1994 Boiled Noodles</span>
+                            <span class="text-lg">33k</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-4xl font-bold tracking-tighter mb-6 font-sans italic">Bites</h2>
+                    <div class="space-y-2 menu-font tracking-[0.1em] text-sm">
+                        <div class="border-b border-white/10 pb-2 flex justify-between text-accent">
+                            <span class="font-sans text-lg">Pisang <span class="text-[10px] italic">(best seller)</span></span>
+                            <span class="text-lg">28k</span>
+                        </div>
+                        <div class="border-b border-white/10 pb-2 flex justify-between">
+                            <span class="font-sans text-lg">Kentang Sosis</span>
+                            <span class="text-lg">28k</span>
+                        </div>
+                        <div class="border-b border-white/10 pb-2 flex justify-between">
+                            <span class="font-sans text-lg">Brownies</span>
+                            <span class="text-lg">20k</span>
+                        </div>
+                        <div class="border-b border-white/10 pb-2 flex justify-between">
+                            <span class="font-sans text-lg">Tahu Cabai Garam</span>
+                            <span class="text-lg">25k</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-4xl font-bold tracking-tighter mb-6 font-sans italic">Dessert</h2>
+                    <div class="space-y-2 menu-font tracking-[0.1em] text-sm">
+                        <div class="border-b border-white/10 pb-2 flex justify-between">
+                            <span class="font-sans text-lg">Pancake</span>
+                            <span class="text-lg">30k</span>
+                        </div>
+                        <div class="border-b border-white/10 pb-2 flex justify-between">
+                            <span class="font-sans text-lg">Waffle</span>
+                            <span class="text-lg">30k</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-5 lg:col-span-6 flex justify-end pt-20">
+                <img src="assets/images/bites.png" alt="Bites Photo" class="w-full max-w-[450px] drop-shadow-2xl">
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center mt-32">
+            <div class="md:col-span-5 lg:col-span-6 order-2 md:order-1">
+                <div class="relative">
+                    <img src="assets/images/Pastry.png" alt="Pastry and Cake" class="w-full max-w-[500px] drop-shadow-2xl">
+                </div>
+            </div>
+
+            <div class="md:col-span-7 lg:col-span-6 order-1 md:order-2">
+                <h2 class="text-4xl font-bold tracking-tighter mb-6 font-sans italic">Pastry</h2>
+                <div class="space-y-3 menu-font tracking-[0.1em] text-sm">
+                    <div class="border-b border-white/10 pb-2 flex justify-between">
+                        <span class="font-sans text-lg">Plain Croissant</span>
+                        <span class="text-lg">27.5k</span>
+                    </div>
+                    <div class="border-b border-white/10 pb-2 flex justify-between">
+                        <span class="font-sans text-lg">Almond Croissant</span>
+                        <span class="text-lg">35k</span>
+                    </div>
+                    <div class="border-b border-white/10 pb-2 flex justify-between">
+                        <span class="font-sans text-lg">Ovomaltine Croissant</span>
+                        <span class="text-lg">33.5k</span>
+                    </div>
+                    <div class="border-b border-white/10 pb-2 flex justify-between">
+                        <span class="font-sans text-lg">Chocolate Pepito</span>
+                        <span class="text-lg">35.5k</span>
+                    </div>
+                    <div class="border-b border-white/10 pb-2 flex justify-between">
+                        <span class="font-sans text-lg">Ebony Ivory Cake</span>
+                        <span class="text-lg">39.9k</span>
+                    </div>
+                    <div class="border-b border-white/10 pb-2 flex justify-between text-accent">
+                        <span class="font-sans text-lg">Tiramisu Cake</span>
+                        <span class="text-lg">41.5k</span>
+                    </div>
+                    <div class="border-b border-white/10 pb-2 flex justify-between">
+                        <span class="font-sans text-lg">Red Velvet Cake</span>
+                        <span class="text-lg">42k</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+    <footer id="contact" class="bg-black border-t-8 border-[#F2A900] pt-32 pb-16 px-8 md:px-20 mt-18">
+        <div class="max-w-4xl mx-auto md:mx-0">
+            <div class="mb-4">
+                <img src="assets/images/Logo-1994.jpg" alt="Logo Footer" class="h-14 object-contain">
+            </div>
+
+            <div class="mb-10">
+                <a href="mailto:1994cncs@gmail.com" class="font-sans text-sm md:text-base tracking-widest hover:text-accent transition lowercase text-white">
+                    1994cncs@gmail.com
+                </a>
+            </div>
+            
+            <div class="font-sans text-xs md:text-sm tracking-wide leading-relaxed opacity-70 space-y-4 font-light text-white">
+                <p>
+                    Jl. Pakar Timur No. 10, Ciburial,<br>
+                    Kab. Bandung, Kota Bandung, Jawa Barat 40198
+                </p>
+                <p>
+                    Jl. Naripan No.59, Kb. Pisang, <br>
+                    Kota Bandung, Jawa Barat 40112
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const navLinks = document.getElementById('nav-links');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            // Munculkan/Sembunyikan Menu
+            navLinks.classList.toggle('translate-x-full');
+            
+            // Animasi Icon: Garis Tiga ke 'X'
+            if (navLinks.classList.contains('translate-x-full')) {
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            } else {
+                menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            }
+        });
+
+        // Otomatis tutup menu jika link diklik
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.add('translate-x-full');
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            });
+        });
+    </script>
+</body>
+</html>
